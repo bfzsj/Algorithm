@@ -5,6 +5,7 @@ class HashTable{
     constructor(){
         this.table=new Array(137);
     }
+
     simpleHash(data){
         let total=0;
         for(let i=0;i<data.length;++i){
@@ -37,6 +38,9 @@ class HashTable{
         let pos=this.betterHash(data);
         this.table[pos]=data;
     }
+    sxd(){
+        console.log(122)
+    }
 }
 let someNames = ["David", "Jennifer", "Donnie", "Raymond",
     "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
@@ -44,4 +48,5 @@ let hTable=new HashTable();
 for(let i=0;i<someNames.length;++i){
     hTable.put(someNames[i]);
 }
+
 hTable.showDistro();

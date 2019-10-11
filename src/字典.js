@@ -32,6 +32,7 @@ class Dictionary{
             delete data[key]
         })
     }
+
 }
 var pbook = new Dictionary();
 pbook.add("Mike","123");
