@@ -38,15 +38,44 @@ class HashTable{
         let pos=this.betterHash(data);
         this.table[pos]=data;
     }
-    sxd(){
-        console.log(122)
+}
+//整型化api
+function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function genStuData(arr) {
+    for (let i = 0; i < arr.length; ++i) {
+        let num = "";
+        for (let j = 1; j <= 9; ++j) {
+            num += Math.floor(Math.random() * 10);
+        }
+        num += getRandomInt(50, 100);
+        arr[i] = num;
     }
 }
+//散列化字符串
 let someNames = ["David", "Jennifer", "Donnie", "Raymond",
     "Cynthia", "Mike", "Clayton", "Danny", "Jonathan"];
 let hTable=new HashTable();
 for(let i=0;i<someNames.length;++i){
     hTable.put(someNames[i]);
 }
-
 hTable.showDistro();
+
+//散列化整型键
+let numStudents=10;
+let arrSize=97;
+let idLen=9;
+let students=new Array(numStudents);
+genStuData(students);
+console.log("Student data:");
+for(let i=0;i<students.length;++i){
+    console.log(students[i].substring(0,8)+" "+students[i].substring(9));
+}
+console.log("Data distribution:");
+for(let i=0;i<students.length;++i){
+    hTable.put(students[i]);
+}
+hTable.showDistro()
+console.log(hTable)
+
