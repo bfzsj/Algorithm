@@ -1,8 +1,8 @@
 {
-  "name": "shixiaodong",
+  "name": "Algorithm",
   "version": "1.0.0",
   "description": "JavaScript算法学习",
-  "main": "字典.js",
+  "main": "src",
   "dependencies": {
     "babel-preset-env": "^1.7.0"
   },
