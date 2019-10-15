@@ -71,6 +71,15 @@ class Set{
         }
         return true;
     }
+    difference(set) {
+        var tempSet = new Set();
+        for (var i = 0; i < this.dataStore.length; ++i) {
+            if (!set.contains(this.dataStore[i])) {
+                tempSet.add(this.dataStore[i]);
+            }
+        }
+        return tempSet;
+    }
 }
 //测试基本操作
 let names = new Set();
@@ -106,3 +115,16 @@ if(dmp.subset(names)){
 }else{
     console.log("names不是dmp的子集")
 }
+//测试补集
+let cis = new Set();
+let is = new Set();
+cis.add("Clayton");
+cis.add("Jennifer");
+cis.add("Danny");
+is.add("Bryan");
+is.add("Clayton");
+is.add("Jennifer");
+let diff = new Set();
+diff = cis.difference(is);
+console.log("[" + cis.show() + "] difference [" + is.show()
+    + "] -> [" + diff.show() + "]");
