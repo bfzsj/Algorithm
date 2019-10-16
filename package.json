@@ -4,7 +4,8 @@
   "description": "JavaScript算法学习",
   "main": "src",
   "dependencies": {
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1"
