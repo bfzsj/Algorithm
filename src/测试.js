@@ -28,6 +28,7 @@ function quick(arr){
     return quick(left).concat([pivot],quick(right));
 }
 console.log(quick(arr))
+console.log(['0','1','2','3','4'].map(parseInt))
 
 
 
